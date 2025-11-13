@@ -8,6 +8,6 @@ public interface IOwnerService
     Task DeleteAsync(int id);
     Task UpdateAsync(int id, OwnerDto ownerDto);
     Task<IEnumerable<OwnerDto>> GetAllAsync();
-    Task<OwnerDto> GetByIdAsync(int id);
+    Task<OwnerDto?> GetByIdAsync(int id);
 
 }
