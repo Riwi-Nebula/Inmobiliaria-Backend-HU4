@@ -31,6 +31,12 @@ public class OwnerConfigurations : IEntityTypeConfiguration<Owner>
                 Id = 1,
                 Name = "Bruce Wayne",
                 Email = "bruce.wayne@gmail.com"
+            },
+            new Owner
+            {
+                Id = 2,
+                Name = "Happy Hogan",
+                Email = ""
             }
         );
     }
