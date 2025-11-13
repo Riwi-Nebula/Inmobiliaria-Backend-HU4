@@ -784,10 +784,10 @@
           }
         }
       },
-      "Pomelo.EntityFrameworkCore.MySql/8.0.2": {
+      "Pomelo.EntityFrameworkCore.MySql/8.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.EntityFrameworkCore.Relational": "[8.0.2, 8.0.999]",
+          "Microsoft.EntityFrameworkCore.Relational": "[8.0.0, 8.0.999]",
           "MySqlConnector": "2.3.5"
         },
         "compile": {
@@ -2629,10 +2629,10 @@
         "mysqlconnector.nuspec"
       ]
     },
-    "Pomelo.EntityFrameworkCore.MySql/8.0.2": {
-      "sha512": "XjnlcxVBLnEMbyEc5cZzgZeDyLvAniACZQ04W1slWN0f4rmfNzl98gEMvHnFH0fMDF06z9MmgGi/Sr7hJ+BVnw==",
+    "Pomelo.EntityFrameworkCore.MySql/8.0.0": {
+      "sha512": "wEzKTeYCs/+cGSpT5zE8UrKkJyqpJ24yBufthDoCWUhpCCYUIsMKeX4fvaYcm9mbkfHP2dZ+p6V+ZKTAZ3hXRQ==",
       "type": "package",
-      "path": "pomelo.entityframeworkcore.mysql/8.0.2",
+      "path": "pomelo.entityframeworkcore.mysql/8.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2640,7 +2640,7 @@
         "icon.png",
         "lib/net8.0/Pomelo.EntityFrameworkCore.MySql.dll",
         "lib/net8.0/Pomelo.EntityFrameworkCore.MySql.xml",
-        "pomelo.entityframeworkcore.mysql.8.0.2.nupkg.sha512",
+        "pomelo.entityframeworkcore.mysql.8.0.0.nupkg.sha512",
         "pomelo.entityframeworkcore.mysql.nuspec"
       ]
     },
@@ -3111,26 +3111,25 @@
       "Microsoft.EntityFrameworkCore.Design >= 8.0.10",
       "Microsoft.Extensions.Configuration >= 8.0.0",
       "Microsoft.Extensions.Configuration.Binder >= 8.0.0",
-      "Microsoft.IdentityModel.Tokens >= 8.14.0",
-      "Pomelo.EntityFrameworkCore.MySql >= 8.0.2",
+      "Pomelo.EntityFrameworkCore.MySql >= 8.0.0",
       "Swashbuckle.AspNetCore >= 6.6.2",
       "System.IdentityModel.Tokens.Jwt >= 8.14.0"
     ]
   },
   "packageFolders": {
-    "/home/cohorte4/.nuget/packages/": {}
+    "/home/faragon/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/cohorte4/RiderProjects/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Api/Inmobiliaria-Backend-HU4.Api.csproj",
+      "projectUniqueName": "/home/faragon/Desktop/Repos/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Api/Inmobiliaria-Backend-HU4.Api.csproj",
       "projectName": "Inmobiliaria-Backend-HU4.Api",
-      "projectPath": "/home/cohorte4/RiderProjects/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Api/Inmobiliaria-Backend-HU4.Api.csproj",
-      "packagesPath": "/home/cohorte4/.nuget/packages/",
-      "outputPath": "/home/cohorte4/RiderProjects/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Api/obj/",
+      "projectPath": "/home/faragon/Desktop/Repos/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Api/Inmobiliaria-Backend-HU4.Api.csproj",
+      "packagesPath": "/home/faragon/.nuget/packages/",
+      "outputPath": "/home/faragon/Desktop/Repos/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Api/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/cohorte4/.nuget/NuGet/NuGet.Config"
+        "/home/faragon/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -3142,11 +3141,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "/home/cohorte4/RiderProjects/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Application/Inmobiliaria-Backend-HU4.Application.csproj": {
-              "projectPath": "/home/cohorte4/RiderProjects/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Application/Inmobiliaria-Backend-HU4.Application.csproj"
+            "/home/faragon/Desktop/Repos/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Application/Inmobiliaria-Backend-HU4.Application.csproj": {
+              "projectPath": "/home/faragon/Desktop/Repos/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Application/Inmobiliaria-Backend-HU4.Application.csproj"
             },
-            "/home/cohorte4/RiderProjects/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Infrastructure/Inmobiliaria-Backend-HU4.Infrastructure.csproj": {
-              "projectPath": "/home/cohorte4/RiderProjects/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Infrastructure/Inmobiliaria-Backend-HU4.Infrastructure.csproj"
+            "/home/faragon/Desktop/Repos/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Infrastructure/Inmobiliaria-Backend-HU4.Infrastructure.csproj": {
+              "projectPath": "/home/faragon/Desktop/Repos/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Infrastructure/Inmobiliaria-Backend-HU4.Infrastructure.csproj"
             }
           }
         }
@@ -3155,7 +3154,13 @@
         "warnAsError": [
           "NU1605"
         ]
-      }
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      },
+      "SdkAnalysisLevel": "9.0.300"
     },
     "frameworks": {
       "net8.0": {
@@ -3187,13 +3192,9 @@
             "target": "Package",
             "version": "[8.0.0, )"
           },
-          "Microsoft.IdentityModel.Tokens": {
-            "target": "Package",
-            "version": "[8.14.0, )"
-          },
           "Pomelo.EntityFrameworkCore.MySql": {
             "target": "Package",
-            "version": "[8.0.2, )"
+            "version": "[8.0.0, )"
           },
           "Swashbuckle.AspNetCore": {
             "target": "Package",
@@ -3223,8 +3224,19 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.121/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/home/faragon/.dotnet/sdk/9.0.306/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1605",
+      "level": "Error",
+      "message": "Warning As Error: Detected package downgrade: Pomelo.EntityFrameworkCore.MySql from 8.0.2 to 8.0.0. Reference the package directly from the project to select a different version. \n Inmobiliaria-Backend-HU4.Api -> Inmobiliaria-Backend-HU4.Infrastructure -> Pomelo.EntityFrameworkCore.MySql (>= 8.0.2) \n Inmobiliaria-Backend-HU4.Api -> Pomelo.EntityFrameworkCore.MySql (>= 8.0.0)",
+      "libraryId": "Pomelo.EntityFrameworkCore.MySql",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
 }

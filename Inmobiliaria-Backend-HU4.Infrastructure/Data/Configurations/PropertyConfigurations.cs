@@ -20,6 +20,17 @@ public class PropertyConfigurations : IEntityTypeConfiguration<Property>
             .IsRequired()
             .HasMaxLength(900);
         
+        builder.Property(p => p.Location)
+            .IsRequired()
+            .HasMaxLength(500);
+
+        builder.Property(p => p.PictureUrl)
+            .IsRequired();
         
+        builder.Property(p => p.PictureUrl)
+            .IsRequired();
+        
+        builder.Property(p => p.OwnerId)
+            .IsRequired();
     }
 }
