@@ -4,5 +4,6 @@ public enum PropertyState
 {
     Disponible,
     Vendida,
-    Alquilada
+    Alquilada,
+    Otro
 }
