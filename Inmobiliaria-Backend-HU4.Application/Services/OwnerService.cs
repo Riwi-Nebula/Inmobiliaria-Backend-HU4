@@ -14,7 +14,7 @@ public class OwnerService : IOwnerService
         _repository = repository;
     }
 
-    //metodos privados para mapear el dto
+    //metodo privado para mapear el dto
     private OwnerDto MapOwnerToDto(Owner owner)
     {
         return new OwnerDto
