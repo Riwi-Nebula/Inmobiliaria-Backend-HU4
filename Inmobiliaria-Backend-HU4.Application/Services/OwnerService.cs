@@ -4,6 +4,7 @@ using Inmobiliaria_Backend_HU4.Domain.Interfaces;
 using Inmobiliaria_Backend_HU4.Domain.Entities;
 
 namespace Inmobiliaria_Backend_HU4.Application.Services;
+//TODO refactorizar para mejorar optimizacion
 
 public class OwnerService : IOwnerService
 {
