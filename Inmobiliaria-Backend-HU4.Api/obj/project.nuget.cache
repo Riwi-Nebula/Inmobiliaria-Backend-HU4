@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "dgSpecHash": "NWDZGfXgF60=",
-  "success": false,
+  "dgSpecHash": "itnRyQ+SVco=",
+  "success": true,
   "projectFilePath": "/home/faragon/Desktop/Repos/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Api/Inmobiliaria-Backend-HU4.Api.csproj",
   "expectedPackageFiles": [
     "/home/faragon/.nuget/packages/bcrypt.net-next/4.0.3/bcrypt.net-next.4.0.3.nupkg.sha512",
@@ -41,7 +41,7 @@
     "/home/faragon/.nuget/packages/microsoft.openapi/1.6.14/microsoft.openapi.1.6.14.nupkg.sha512",
     "/home/faragon/.nuget/packages/mono.texttemplating/2.2.1/mono.texttemplating.2.2.1.nupkg.sha512",
     "/home/faragon/.nuget/packages/mysqlconnector/2.3.5/mysqlconnector.2.3.5.nupkg.sha512",
-    "/home/faragon/.nuget/packages/pomelo.entityframeworkcore.mysql/8.0.0/pomelo.entityframeworkcore.mysql.8.0.0.nupkg.sha512",
+    "/home/faragon/.nuget/packages/pomelo.entityframeworkcore.mysql/8.0.2/pomelo.entityframeworkcore.mysql.8.0.2.nupkg.sha512",
     "/home/faragon/.nuget/packages/swashbuckle.aspnetcore/6.6.2/swashbuckle.aspnetcore.6.6.2.nupkg.sha512",
     "/home/faragon/.nuget/packages/swashbuckle.aspnetcore.swagger/6.6.2/swashbuckle.aspnetcore.swagger.6.6.2.nupkg.sha512",
     "/home/faragon/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.6.2/swashbuckle.aspnetcore.swaggergen.6.6.2.nupkg.sha512",
@@ -61,17 +61,5 @@
     "/home/faragon/.nuget/packages/system.text.encoding.codepages/6.0.0/system.text.encoding.codepages.6.0.0.nupkg.sha512",
     "/home/faragon/.nuget/packages/system.threading.channels/6.0.0/system.threading.channels.6.0.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1605",
-      "level": "Error",
-      "message": "Warning As Error: Detected package downgrade: Pomelo.EntityFrameworkCore.MySql from 8.0.2 to 8.0.0. Reference the package directly from the project to select a different version. \n Inmobiliaria-Backend-HU4.Api -> Inmobiliaria-Backend-HU4.Infrastructure -> Pomelo.EntityFrameworkCore.MySql (>= 8.0.2) \n Inmobiliaria-Backend-HU4.Api -> Pomelo.EntityFrameworkCore.MySql (>= 8.0.0)",
-      "projectPath": "/home/faragon/Desktop/Repos/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Api/Inmobiliaria-Backend-HU4.Api.csproj",
-      "filePath": "/home/faragon/Desktop/Repos/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Api/Inmobiliaria-Backend-HU4.Api.csproj",
-      "libraryId": "Pomelo.EntityFrameworkCore.MySql",
-      "targetGraphs": [
-        "net8.0"
-      ]
-    }
-  ]
+  "logs": []
 }

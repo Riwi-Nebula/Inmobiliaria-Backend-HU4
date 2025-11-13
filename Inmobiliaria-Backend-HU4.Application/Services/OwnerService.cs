@@ -19,6 +19,7 @@ public class OwnerService : IOwnerService
     {
         return new OwnerDto
         {
+            Id = owner.Id,
             Name = owner.Name,
             Email = owner.Email
         };
@@ -93,11 +94,12 @@ public class OwnerService : IOwnerService
         }
     }
 
-    public Task<IEnumerable<OwnerDto>> GetAllAsync()
+    public async Task<IEnumerable<OwnerDto>> GetAllAsync()
     {
         try
         {
-
+            var owners = await _repository.GetAllOwners();
+            return owners.Select(MapOwnerToDto).ToList();
         }
         catch (Exception e)
         {
@@ -109,11 +111,17 @@ public class OwnerService : IOwnerService
         }
     }
 
-    public Task<OwnerDto> GetByIdAsync(int id)
+    public async Task<OwnerDto?> GetByIdAsync(int id)
     {
         try
         {
+            var owner = await _repository.GetOwnerById(id);
+            if (owner != null)
+            {
+                return MapOwnerToDto(owner);
+            }
 
+            return null;
         }
         catch (Exception e)
         {
