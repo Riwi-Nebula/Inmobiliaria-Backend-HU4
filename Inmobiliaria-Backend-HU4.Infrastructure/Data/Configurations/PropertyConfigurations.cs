@@ -38,7 +38,7 @@ public class PropertyConfigurations : IEntityTypeConfiguration<Property>
         builder.Property(p => p.OwnerId)
             .IsRequired();
         
-        //Crear un Owner de prueba:
+        //Crear una Property de prueba:
         builder.HasData(
             new Property
             {
