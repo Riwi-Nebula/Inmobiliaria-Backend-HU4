@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/faragon/Desktop/Repos/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Domain/Inmobiliaria-Backend-HU4.Domain.csproj": {}
+    "/home/cohorte4/RiderProjects/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Domain/Inmobiliaria-Backend-HU4.Domain.csproj": {}
   },
   "projects": {
-    "/home/faragon/Desktop/Repos/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Domain/Inmobiliaria-Backend-HU4.Domain.csproj": {
+    "/home/cohorte4/RiderProjects/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Domain/Inmobiliaria-Backend-HU4.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/faragon/Desktop/Repos/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Domain/Inmobiliaria-Backend-HU4.Domain.csproj",
+        "projectUniqueName": "/home/cohorte4/RiderProjects/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Domain/Inmobiliaria-Backend-HU4.Domain.csproj",
         "projectName": "Inmobiliaria-Backend-HU4.Domain",
-        "projectPath": "/home/faragon/Desktop/Repos/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Domain/Inmobiliaria-Backend-HU4.Domain.csproj",
-        "packagesPath": "/home/faragon/.nuget/packages/",
-        "outputPath": "/home/faragon/Desktop/Repos/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Domain/obj/",
+        "projectPath": "/home/cohorte4/RiderProjects/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Domain/Inmobiliaria-Backend-HU4.Domain.csproj",
+        "packagesPath": "/home/cohorte4/.nuget/packages/",
+        "outputPath": "/home/cohorte4/RiderProjects/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Domain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/faragon/.nuget/NuGet/NuGet.Config"
+          "/home/cohorte4/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -32,13 +32,7 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.300"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -59,7 +53,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/home/faragon/.dotnet/sdk/9.0.306/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.121/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
