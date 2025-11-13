@@ -5,5 +5,6 @@ public enum PropertyType
     Casa,
     Apartamento,
     Lote,
-    Apartaestudio
+    Apartaestudio,
+    Otro
 }
