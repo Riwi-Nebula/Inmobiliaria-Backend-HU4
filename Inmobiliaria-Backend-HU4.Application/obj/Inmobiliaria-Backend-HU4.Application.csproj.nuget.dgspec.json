@@ -1,0 +1,148 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/faragon/Desktop/Repos/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Application/Inmobiliaria-Backend-HU4.Application.csproj": {}
+  },
+  "projects": {
+    "/home/faragon/Desktop/Repos/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Application/Inmobiliaria-Backend-HU4.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/faragon/Desktop/Repos/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Application/Inmobiliaria-Backend-HU4.Application.csproj",
+        "projectName": "Inmobiliaria-Backend-HU4.Application",
+        "projectPath": "/home/faragon/Desktop/Repos/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Application/Inmobiliaria-Backend-HU4.Application.csproj",
+        "packagesPath": "/home/faragon/.nuget/packages/",
+        "outputPath": "/home/faragon/Desktop/Repos/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Application/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/faragon/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "/home/faragon/Desktop/Repos/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Domain/Inmobiliaria-Backend-HU4.Domain.csproj": {
+                "projectPath": "/home/faragon/Desktop/Repos/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Domain/Inmobiliaria-Backend-HU4.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "BCrypt.Net-Next": {
+              "target": "Package",
+              "version": "[4.0.3, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[8.14.0, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[8.14.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/home/faragon/.dotnet/sdk/9.0.306/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/faragon/Desktop/Repos/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Domain/Inmobiliaria-Backend-HU4.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/faragon/Desktop/Repos/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Domain/Inmobiliaria-Backend-HU4.Domain.csproj",
+        "projectName": "Inmobiliaria-Backend-HU4.Domain",
+        "projectPath": "/home/faragon/Desktop/Repos/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Domain/Inmobiliaria-Backend-HU4.Domain.csproj",
+        "packagesPath": "/home/faragon/.nuget/packages/",
+        "outputPath": "/home/faragon/Desktop/Repos/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Domain/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/faragon/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/home/faragon/.dotnet/sdk/9.0.306/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
