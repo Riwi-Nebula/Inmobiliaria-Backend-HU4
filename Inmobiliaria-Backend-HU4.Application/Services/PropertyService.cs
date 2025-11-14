@@ -10,9 +10,11 @@ namespace Inmobiliaria_Backend_HU4.Application.Services;
 public class PropertyService : IPropertyService
 {
     private readonly IPropertyRepository _repository;
-    public PropertyService(IPropertyRepository repository)
+    private readonly IClouddinaryService _clouddinaryService;
+    public PropertyService(IPropertyRepository repository, IClouddinaryService clouddinaryService)
     {
         _repository = repository;
+        _clouddinaryService = clouddinaryService;
     }
 
     private PropertyDto MapPropertyToDto(Property property)
@@ -26,66 +28,73 @@ public class PropertyService : IPropertyService
             State = property.State.ToString(),
             Location = property.Location,
             Address = property.Address,
-            Url = property.PictureUrl,
+            Urls = property.PictureUrl,
             Price = property.Price,
             OwnerId = property.OwnerId
         };
     }
 
-    public async Task<PropertyDto> CreateAsync(PropertyDto propertyDto)
+public async Task<PropertyDto> CreateAsync(PropertyDto propertyDto, List<UploadFileDto>? images)
+{
+    try
     {
-        try
+        var properties = await _repository.GetAllProperties();
+        bool exists = properties.Any(p =>
+            p.Tittle == propertyDto.Tittle &&
+            p.Location == propertyDto.Location &&
+            p.Description == propertyDto.Description &&
+            p.Address == propertyDto.Address
+        );
+
+        if (exists)
+            throw new InvalidOperationException("Ya existe una propiedad con esos datos");
+
+        if (propertyDto.Price <= 0)
+            throw new InvalidOperationException("El precio debe ser mayor a 0");
+
+        // Manejar varias imágenes
+        List<string> imageUrls = new List<string>();
+
+        if (images != null && images.Count > 0)
         {
-            var properties = await _repository.GetAllProperties();
-            bool exists = properties.Any(p =>
-                p.Tittle == propertyDto.Tittle &&
-                p.Location == propertyDto.Location &&
-                p.Description == propertyDto.Description &&
-                p.Address == propertyDto.Address
-            );
-
-            if (exists)
+            foreach (var img in images)
             {
-                Console.WriteLine("========================================================");
-                throw new InvalidOperationException($"Ya existe una propiedad con esos datos");
+                var url = await _clouddinaryService.UploadImageAsync(img);
+                imageUrls.Add(url);
             }
-
-            if (!Enum.TryParse<PropertyType>(propertyDto.Type, true, out var propertyType))
-            {
-                propertyType = PropertyType.Otro;
-            }
-
-            if (!Enum.TryParse<PropertyState>(propertyDto.State, true, out var propertyState))
-            {
-                propertyState = PropertyState.Otro;
-            }
-
-            var property = new Property
-            {
-                Tittle = propertyDto.Tittle,
-                Description = propertyDto.Description,
-                Type = propertyType,
-                State = propertyState,
-                Location = propertyDto.Location,
-                Address = propertyDto.Address,
-                PictureUrl = propertyDto.Url,
-                Price = propertyDto.Price,
-                OwnerId = propertyDto.OwnerId
-            };
-
-            var newProperty = await _repository.CreateProperty(property);
-
-            return MapPropertyToDto(newProperty);
         }
-        catch (Exception e)
+
+        if (!Enum.TryParse<PropertyType>(propertyDto.Type, true, out var propertyType))
+            propertyType = PropertyType.Otro;
+
+        if (!Enum.TryParse<PropertyState>(propertyDto.State, true, out var propertyState))
+            propertyState = PropertyState.Otro;
+
+        var property = new Property
         {
-            Console.WriteLine("========================================================");
-            Console.WriteLine($"Ocurrió un error creando la propiedad:\n{e}\nExplotó en PropertyService");
-            Console.WriteLine("Posible error en Infrastructure o Application");
-            Console.WriteLine("========================================================");
-            throw;
-        }
+            Tittle = propertyDto.Tittle,
+            Description = propertyDto.Description,
+            Type = propertyType,
+            State = propertyState,
+            Location = propertyDto.Location,
+            Address = propertyDto.Address,
+            PictureUrl = imageUrls, // ahora lista
+            Price = propertyDto.Price,
+            OwnerId = propertyDto.OwnerId
+        };
+
+        var newProperty = await _repository.CreateProperty(property);
+        return MapPropertyToDto(newProperty);
     }
+    catch (Exception e)
+    {
+        Console.WriteLine("========================================================");
+        Console.WriteLine($"Ocurrió un error creando la propiedad:\n{e}\nExplotó en PropertyService");
+        Console.WriteLine("Posible error en Infrastructure o Application");
+        Console.WriteLine("========================================================");
+        throw;
+    }
+}
 
     public async Task DeleteAsync(int id)
     {
@@ -120,7 +129,7 @@ public class PropertyService : IPropertyService
         property.State = propertyState;
         property.Location = propertyDto.Location;
         property.Address = propertyDto.Address;
-        property.PictureUrl = propertyDto.Url;
+        property.PictureUrl = propertyDto.Urls;
         property.Price = propertyDto.Price;
         property.OwnerId = propertyDto.OwnerId;
 

@@ -3,11 +3,13 @@ using Inmobiliaria_Backend_HU4.Application.Interfaces;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
-//using Inmobiliaria_Backend_HU4.Application.Interfaces;
+using Inmobiliaria_Backend_HU4.Application.Interfaces;
 using Inmobiliaria_Backend_HU4.Application.Services;
 using Inmobiliaria_Backend_HU4.Domain.Interfaces;
 using Inmobiliaria_Backend_HU4.Infrastructure.Data;
 using Inmobiliaria_Backend_HU4.Infrastructure.Repositories;
+using Inmobiliaria_Backend_HU4.Infrastructure.Services;
+using Inmobiliaria_Backend_HU4.Infrastructure.Settings;
 using Microsoft.OpenApi.Models;
 
 
@@ -37,6 +39,12 @@ builder.Services.AddScoped<TokenService>();
 builder.Services.AddScoped<IOwnerService, OwnerService>();
 builder.Services.AddScoped<IPropertyService, PropertyService>();
 
+// ===================== Cloudinary =====================
+builder.Services.Configure<CloudinarySettings>(
+    builder.Configuration.GetSection("CloudinarySettings")
+);
+
+builder.Services.AddScoped<IClouddinaryService, CloudinaryService>();
 
 // ===================== Configuracion JWT =====================
 //Configura el sistema de autenticación para validar tokens JWT en las solicitudes HTTP.

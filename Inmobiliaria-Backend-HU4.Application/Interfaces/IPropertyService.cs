@@ -4,7 +4,7 @@ namespace Inmobiliaria_Backend_HU4.Application.Interfaces;
 
 public interface IPropertyService
 {
-    Task<PropertyDto> CreateAsync(PropertyDto propertyDto);
+    Task<PropertyDto> CreateAsync(PropertyDto propertyDto, List<UploadFileDto>? image);
     Task DeleteAsync(int id);
     Task UpdateAsync(int id, PropertyDto propertyDto);
     Task<IEnumerable<PropertyDto>> GetAllAsync();

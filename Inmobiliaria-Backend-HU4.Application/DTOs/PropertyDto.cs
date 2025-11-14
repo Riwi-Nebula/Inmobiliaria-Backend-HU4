@@ -9,7 +9,7 @@ public class PropertyDto
     public string State { get; set; }
     public string Location { get; set; }
     public string Address { get; set; }
-    public string? Url { get; set; }
+    public List<string>? Urls { get; set; }
     public float Price { get; set; }
     public int OwnerId { get; set; }
 }

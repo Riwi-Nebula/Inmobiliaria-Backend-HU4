@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Inmobiliaria_Backend_HU4.Application.DTOs;
 using Inmobiliaria_Backend_HU4.Application.Interfaces;
+using Inmobiliaria_Backend_HU4.Domain.Entities;
 
 namespace Inmobiliaria_Backend_HU4.Api.Controllers;
 
@@ -51,11 +52,27 @@ public class PropertyController : ControllerBase
 
     [HttpPost]
     [Authorize(Roles = "Admin")]
-    public async Task<IActionResult> Create([FromBody] PropertyDto propertyDto)
+    [Consumes("multipart/form-data")]
+    public async Task<IActionResult> Create(
+        [FromForm] PropertyDto propertyDto,
+        [FromForm] List<IFormFile>? images)
     {
         try
         {
-            var newProperty = await _service.CreateAsync(propertyDto);
+            UploadFileDto? dto = null;
+
+            if (images != null && images.Any())
+            {
+                var firstImage = images.First();  // 👈 Tomamos solo la primera imagen
+
+                dto = new UploadFileDto
+                {
+                    FileName = firstImage.FileName,
+                    FileStream = firstImage.OpenReadStream()
+                };
+            }
+        
+            var newProperty = await _service.CreateAsync(propertyDto, [dto]);
             return CreatedAtAction(nameof(GetById), new { id = newProperty.Id }, newProperty);
         }
         catch (Exception e)

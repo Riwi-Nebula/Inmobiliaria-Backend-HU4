@@ -31,6 +31,9 @@ public class PropertyConfigurations : IEntityTypeConfiguration<Property>
 
         // builder.Property(p => p.PictureUrl)
         //     .IsRequired();
+
+        builder.Property(p => p.PictureUrl)
+            .HasColumnType("text[]");
         
         builder.Property(p => p.OwnerId)
             .IsRequired();
