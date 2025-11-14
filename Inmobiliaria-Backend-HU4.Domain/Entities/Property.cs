@@ -13,7 +13,7 @@ public class Property
     public PropertyState? State { get; set; }
     [Column(TypeName = "varchar(100)")] public string Location { get; set; }
     [Column(TypeName = "varchar(800)")] public string Address { get; set; }
-    [Column(TypeName = "text")] public string PictureUrl { get; set; }
+    [Column(TypeName = "text")] public string? PictureUrl { get; set; }
     [Column(TypeName = "decimal(5,2)")] public float Price { get; set; }
     public int OwnerId { get; set; }
     
