@@ -6,7 +6,7 @@ public interface IOwnerService
 {
     Task<OwnerDto> CreateAsync(OwnerDto ownerDto);
     Task DeleteAsync(int id);
-    Task UpdateAsync(int id, OwnerDto ownerDto);
+    Task<OwnerDto> UpdateAsync(int id, OwnerDto ownerDto);
     Task<IEnumerable<OwnerDto>> GetAllAsync();
     Task<OwnerDto?> GetByIdAsync(int id);
 
