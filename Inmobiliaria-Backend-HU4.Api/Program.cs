@@ -27,10 +27,14 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 // ===================== Inyeccion de dependencias =====================
 // Repositorios
 builder.Services.AddScoped<ICustomerRepository, CustomerRepository>();
+builder.Services.AddScoped<IOwnerRepository, OwnerRepository>();
+builder.Services.AddScoped<IPropertyRepository, PropertyRepository>();
 
 //Servicios
 builder.Services.AddScoped<CustomerService>();
 builder.Services.AddScoped<TokenService>();
+builder.Services.AddScoped<OwnerService>();
+builder.Services.AddScoped<PropertyService>();
 
 
 // ===================== Configuracion JWT =====================
