@@ -15,7 +15,7 @@ public class TokenService
         _configuration = configuration;
     }
 
-    public string GenerateToken(string email, string role)
+    public string GenerateToken(int id,string email, string role)
     {
         var jwtSettings = _configuration.GetSection("Jwt");
         var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSettings["Key"]));
@@ -23,6 +23,7 @@ public class TokenService
 
         var claims = new[]
         {
+            new Claim("id", id.ToString()),
             new Claim(JwtRegisteredClaimNames.Sub, email),
             new Claim(ClaimTypes.Role, role),
             new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())

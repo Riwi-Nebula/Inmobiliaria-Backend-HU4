@@ -16,23 +16,35 @@ namespace Inmobiliaria_Backend_HU4.Api.Controllers
         {
             _customerService = customerService;
         }
-
-        //solo admin puede ver todos los clientes
-        [Authorize(Roles = "Admin")]
+        
+        [Authorize]
         // GET: api/customer
         [HttpGet]
         public async Task<IActionResult> GetAllCustomersAsync()
         {
+            var loggedRole = User.FindFirst(System.Security.Claims.ClaimTypes.Role).Value;
+
+            //solo admin puede ver todos los clientes
+            if (loggedRole != "Admin")
+                return Unauthorized(new { message = "No estás autorizado para ver todos los clientes." });
+            
             var customers = await _customerService.GetAllCustomersAsync();
             return Ok(customers);
         }
 
-        // tanto admin y customer pueden ver su propio perfil
+        // admin puede ver todos y customer solo su mismo id
         [Authorize(Roles = "Admin,Customer")]
         // GET: api/customer/{id}
         [HttpGet("{id}")]
         public async Task<IActionResult> GetCustomerByIdAsync(int id)
         {
+            var loggedUserId = int.Parse(User.FindFirst("id").Value);
+            var loggedRole = User.FindFirst(System.Security.Claims.ClaimTypes.Role).Value;
+
+            //Customer solo puede ver su propio perfil
+            if (loggedRole == "Customer" && loggedUserId != id)
+                return Unauthorized(new { message = "No estás autorizado para ver este perfil." });
+            
             var customer = await _customerService.GetCustomerByIdAsync(id);
             if (customer == null)
                 return NotFound(new { message = "Customer not found." });
@@ -40,12 +52,18 @@ namespace Inmobiliaria_Backend_HU4.Api.Controllers
             return Ok(customer);
         }
 
-        //solo admin puede crear nuevos clientes
-        [Authorize(Roles = "Admin")]
+        
+        [Authorize]
         // POST: api/customer
         [HttpPost]
         public async Task<IActionResult> AddCustomerAsync([FromBody] AddCustomerDto dto)
         {
+            var loggedRole = User.FindFirst(System.Security.Claims.ClaimTypes.Role).Value;
+
+            //solo admin puede crear nuevos clientes
+            if (loggedRole != "Admin")
+                return Unauthorized(new { message = "No estás autorizado para crear clientes." });
+            
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
@@ -53,25 +71,38 @@ namespace Inmobiliaria_Backend_HU4.Api.Controllers
             return Created($"/api/customer/{created.Id}", created);
         }
 
-        //tanto admin y customer pueden actualizar su perfil
+        //admin puede editar todos y customer solo su propio id
         [Authorize(Roles = "Admin,Customer")]
         // PUT: api/customer/{id}
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateCustomerAsync(int id, [FromBody] UpdateCustomerDto dto)
         {
+            var loggedUserId = int.Parse(User.FindFirst("id").Value);
+            var loggedRole = User.FindFirst(System.Security.Claims.ClaimTypes.Role).Value;
+
+            // Customer solo puede editar su propio perfil
+            if (loggedRole == "Customer" && loggedUserId != id)
+                return Unauthorized(new { message = "No estás autorizado para editar este perfil." });
+
             var updatedCustomer = await _customerService.UpdateCustomerAsync(id, dto);
             if (updatedCustomer == null)
                 return NotFound(new { message = "Customer not found." });
 
             return Ok(updatedCustomer);
         }
-
-        //solo admin puede eliminar clientes
-        [Authorize(Roles = "Admin")]
+        
+        [Authorize]
         // DELETE: api/customer/{id}
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteCustomerAsync(int id)
         {
+            
+            var loggedRole = User.FindFirst(System.Security.Claims.ClaimTypes.Role).Value;
+
+            //solo admin puede eliminar clientes
+            if (loggedRole != "Admin")
+                return Unauthorized(new { message = "No estás autorizado para eliminar clientes." });
+            
             var deleted = await _customerService.DeleteCustomerAsync(id);
             if (!deleted)
                 return NotFound(new { message = "Customer not found." });

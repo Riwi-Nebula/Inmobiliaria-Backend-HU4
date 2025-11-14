@@ -3118,19 +3118,19 @@
     ]
   },
   "packageFolders": {
-    "/home/cohorte4/.nuget/packages/": {}
+    "/home/sarah/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/cohorte4/RiderProjects/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Api/Inmobiliaria-Backend-HU4.Api.csproj",
+      "projectUniqueName": "/home/sarah/Descargas/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Api/Inmobiliaria-Backend-HU4.Api.csproj",
       "projectName": "Inmobiliaria-Backend-HU4.Api",
-      "projectPath": "/home/cohorte4/RiderProjects/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Api/Inmobiliaria-Backend-HU4.Api.csproj",
-      "packagesPath": "/home/cohorte4/.nuget/packages/",
-      "outputPath": "/home/cohorte4/RiderProjects/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Api/obj/",
+      "projectPath": "/home/sarah/Descargas/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Api/Inmobiliaria-Backend-HU4.Api.csproj",
+      "packagesPath": "/home/sarah/.nuget/packages/",
+      "outputPath": "/home/sarah/Descargas/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Api/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/cohorte4/.nuget/NuGet/NuGet.Config"
+        "/home/sarah/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -3142,11 +3142,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "/home/cohorte4/RiderProjects/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Application/Inmobiliaria-Backend-HU4.Application.csproj": {
-              "projectPath": "/home/cohorte4/RiderProjects/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Application/Inmobiliaria-Backend-HU4.Application.csproj"
+            "/home/sarah/Descargas/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Application/Inmobiliaria-Backend-HU4.Application.csproj": {
+              "projectPath": "/home/sarah/Descargas/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Application/Inmobiliaria-Backend-HU4.Application.csproj"
             },
-            "/home/cohorte4/RiderProjects/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Infrastructure/Inmobiliaria-Backend-HU4.Infrastructure.csproj": {
-              "projectPath": "/home/cohorte4/RiderProjects/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Infrastructure/Inmobiliaria-Backend-HU4.Infrastructure.csproj"
+            "/home/sarah/Descargas/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Infrastructure/Inmobiliaria-Backend-HU4.Infrastructure.csproj": {
+              "projectPath": "/home/sarah/Descargas/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Infrastructure/Inmobiliaria-Backend-HU4.Infrastructure.csproj"
             }
           }
         }
