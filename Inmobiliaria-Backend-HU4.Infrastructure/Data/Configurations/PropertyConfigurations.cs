@@ -29,11 +29,8 @@ public class PropertyConfigurations : IEntityTypeConfiguration<Property>
             .IsRequired()
             .HasMaxLength(900);
 
-        builder.Property(p => p.PictureUrl)
-            .IsRequired();
-        
-        builder.Property(p => p.PictureUrl)
-            .IsRequired();
+        // builder.Property(p => p.PictureUrl)
+        //     .IsRequired();
         
         builder.Property(p => p.OwnerId)
             .IsRequired();
@@ -50,7 +47,7 @@ public class PropertyConfigurations : IEntityTypeConfiguration<Property>
                 Location = "NewYork",
                 Address = "200 Park Ave S, Nueva York, NY 10003, EE. UU",
                 //TODO PictureUrl = ""
-                Price = 1800000,
+                Price = 180,
                 OwnerId = 2
             }
         );
