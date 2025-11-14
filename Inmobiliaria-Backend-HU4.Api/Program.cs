@@ -1,33 +1,42 @@
-using Microsoft.OpenApi.Models;
 using System.Text;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
-using Inmobiliaria_Backend_HU4.Application.Interfaces;
+//using Inmobiliaria_Backend_HU4.Application.Interfaces;
 using Inmobiliaria_Backend_HU4.Application.Services;
 using Inmobiliaria_Backend_HU4.Domain.Interfaces;
 using Inmobiliaria_Backend_HU4.Infrastructure.Data;
-using Inmobiliaria_Backend_HU4.Infrastructure.Estensions;
 using Inmobiliaria_Backend_HU4.Infrastructure.Repositories;
+using Microsoft.OpenApi.Models;
+
+
+//using Inmobiliaria_Backend_HU4.Infrastructure.Estensions;
+//using Inmobiliaria_Backend_HU4.Infrastructure.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // ===================== Conexion a la DB =====================
 //Se obtiene la cadena de conexion desde el appsetings.json
-builder.Services.AddInfraestructure(builder.Configuration);
+//builder.Services.AddInfraestructure(builder.Configuration);
 
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
 
 // ===================== Inyeccion de dependencias =====================
 // Repositorios
-//Ejemplo: builder.ServicesAddScoped<IUserRepository, UserRepository>();
-
+builder.Services.AddScoped<ICustomerRepository, CustomerRepository>();
 
 //Servicios
-//Ejemplo: builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<CustomerService>();
+builder.Services.AddScoped<TokenService>();
 
 
 // ===================== Configuracion JWT =====================
 //Configura el sistema de autenticación para validar tokens JWT en las solicitudes HTTP.
+var jwtSettings = builder.Configuration.GetSection("Jwt");
+var key = Encoding.UTF8.GetBytes(jwtSettings["Key"]);
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
     {
@@ -57,7 +66,35 @@ builder.Services.AddSwaggerGen(c =>
         Version = "v1",
         Description = "API para la administracion y gestion de una empresa inmoviliaria"
     });
+
+
+    // Configuración del botón Authorize (JWT)
+    c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+    {
+        Name = "Authorization",
+        Type = SecuritySchemeType.ApiKey,
+        Scheme = "Bearer",
+        BearerFormat = "JWT",
+        In = ParameterLocation.Header,
+        Description = "Introduce 'Bearer' deja un espacio y pon el {token}"
+    });
+
+    c.AddSecurityRequirement(new OpenApiSecurityRequirement
+    {
+        {
+            new OpenApiSecurityScheme
+            {
+                Reference = new OpenApiReference
+                {
+                    Type = ReferenceType.SecurityScheme,
+                    Id = "Bearer"
+                }
+            },
+            Array.Empty<string>()
+        }
+    });
 });
+
 
 
 // ===================== Configuracion del Cors (por si fron lo usa) =====================
