@@ -279,6 +279,9 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
+              "/home/faragon/Desktop/Repos/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Application/Inmobiliaria-Backend-HU4.Application.csproj": {
+                "projectPath": "/home/faragon/Desktop/Repos/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Application/Inmobiliaria-Backend-HU4.Application.csproj"
+              },
               "/home/faragon/Desktop/Repos/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Domain/Inmobiliaria-Backend-HU4.Domain.csproj": {
                 "projectPath": "/home/faragon/Desktop/Repos/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Domain/Inmobiliaria-Backend-HU4.Domain.csproj"
               }
@@ -301,6 +304,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "CloudinaryDotNet": {
+              "target": "Package",
+              "version": "[1.27.8, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.10, )"
