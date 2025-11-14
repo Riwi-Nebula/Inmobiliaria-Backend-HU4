@@ -1,4 +1,5 @@
 using System.Text;
+using Inmobiliaria_Backend_HU4.Application.Interfaces;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -27,10 +28,14 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 // ===================== Inyeccion de dependencias =====================
 // Repositorios
 builder.Services.AddScoped<ICustomerRepository, CustomerRepository>();
+builder.Services.AddScoped<IOwnerRepository, OwnerRepository>();
+builder.Services.AddScoped<IPropertyRepository, PropertyRepository>();
 
 //Servicios
 builder.Services.AddScoped<CustomerService>();
 builder.Services.AddScoped<TokenService>();
+builder.Services.AddScoped<IOwnerService, OwnerService>();
+builder.Services.AddScoped<IPropertyService, PropertyService>();
 
 
 // ===================== Configuracion JWT =====================
