@@ -1,4 +1,5 @@
 using System.Text;
+using Inmobiliaria_Backend_HU4.Application.Interfaces;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -33,8 +34,8 @@ builder.Services.AddScoped<IPropertyRepository, PropertyRepository>();
 //Servicios
 builder.Services.AddScoped<CustomerService>();
 builder.Services.AddScoped<TokenService>();
-builder.Services.AddScoped<OwnerService>();
-builder.Services.AddScoped<PropertyService>();
+builder.Services.AddScoped<IOwnerService, OwnerService>();
+builder.Services.AddScoped<IPropertyService, PropertyService>();
 
 
 // ===================== Configuracion JWT =====================
