@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Inmobiliaria-Backend-HU4.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e9effaf8976405bdd1758e10ee8b4dc94185c7da")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+52fe45be0dcdeca8ea2d6cf876d85c1f753b24c9")]
 [assembly: System.Reflection.AssemblyProductAttribute("Inmobiliaria-Backend-HU4.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Inmobiliaria-Backend-HU4.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
