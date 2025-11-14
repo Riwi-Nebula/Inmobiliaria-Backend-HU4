@@ -2,13 +2,16 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Inmobiliaria-Backend-HU4.Domain\Inmobiliaria-Backend-HU4.Domain.csproj" />
+    <ProjectReference Include="..\Inmobiliaria-Backend-HU4.Application\Inmobiliaria-Backend-HU4.Application.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Data\Configurations\" />
+    <Folder Include="Repositories\" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="CloudinaryDotNet" Version="1.27.8" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.10" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Abstractions" Version="8.0.10" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.10">
@@ -24,6 +27,7 @@
     <RootNamespace>Inmobiliaria_Backend_HU4.Infrastructure</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
   </PropertyGroup>
 
 </Project>

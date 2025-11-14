@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/sarah/Descargas/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Api/Inmobiliaria-Backend-HU4.Api.csproj": {}
+    "/home/faragon/Desktop/Repos/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Api/Inmobiliaria-Backend-HU4.Api.csproj": {}
   },
   "projects": {
-    "/home/sarah/Descargas/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Api/Inmobiliaria-Backend-HU4.Api.csproj": {
+    "/home/faragon/Desktop/Repos/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Api/Inmobiliaria-Backend-HU4.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/sarah/Descargas/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Api/Inmobiliaria-Backend-HU4.Api.csproj",
+        "projectUniqueName": "/home/faragon/Desktop/Repos/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Api/Inmobiliaria-Backend-HU4.Api.csproj",
         "projectName": "Inmobiliaria-Backend-HU4.Api",
-        "projectPath": "/home/sarah/Descargas/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Api/Inmobiliaria-Backend-HU4.Api.csproj",
-        "packagesPath": "/home/sarah/.nuget/packages/",
-        "outputPath": "/home/sarah/Descargas/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Api/obj/",
+        "projectPath": "/home/faragon/Desktop/Repos/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Api/Inmobiliaria-Backend-HU4.Api.csproj",
+        "packagesPath": "/home/faragon/.nuget/packages/",
+        "outputPath": "/home/faragon/Desktop/Repos/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Api/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/sarah/.nuget/NuGet/NuGet.Config"
+          "/home/faragon/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -26,11 +26,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/home/sarah/Descargas/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Application/Inmobiliaria-Backend-HU4.Application.csproj": {
-                "projectPath": "/home/sarah/Descargas/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Application/Inmobiliaria-Backend-HU4.Application.csproj"
+              "/home/faragon/Desktop/Repos/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Application/Inmobiliaria-Backend-HU4.Application.csproj": {
+                "projectPath": "/home/faragon/Desktop/Repos/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Application/Inmobiliaria-Backend-HU4.Application.csproj"
               },
-              "/home/sarah/Descargas/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Infrastructure/Inmobiliaria-Backend-HU4.Infrastructure.csproj": {
-                "projectPath": "/home/sarah/Descargas/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Infrastructure/Inmobiliaria-Backend-HU4.Infrastructure.csproj"
+              "/home/faragon/Desktop/Repos/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Infrastructure/Inmobiliaria-Backend-HU4.Infrastructure.csproj": {
+                "projectPath": "/home/faragon/Desktop/Repos/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Infrastructure/Inmobiliaria-Backend-HU4.Infrastructure.csproj"
               }
             }
           }
@@ -39,7 +39,13 @@
           "warnAsError": [
             "NU1605"
           ]
-        }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0": {
@@ -107,21 +113,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.121/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/home/faragon/.dotnet/sdk/9.0.306/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "/home/sarah/Descargas/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Application/Inmobiliaria-Backend-HU4.Application.csproj": {
+    "/home/faragon/Desktop/Repos/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Application/Inmobiliaria-Backend-HU4.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/sarah/Descargas/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Application/Inmobiliaria-Backend-HU4.Application.csproj",
+        "projectUniqueName": "/home/faragon/Desktop/Repos/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Application/Inmobiliaria-Backend-HU4.Application.csproj",
         "projectName": "Inmobiliaria-Backend-HU4.Application",
-        "projectPath": "/home/sarah/Descargas/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Application/Inmobiliaria-Backend-HU4.Application.csproj",
-        "packagesPath": "/home/sarah/.nuget/packages/",
-        "outputPath": "/home/sarah/Descargas/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Application/obj/",
+        "projectPath": "/home/faragon/Desktop/Repos/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Application/Inmobiliaria-Backend-HU4.Application.csproj",
+        "packagesPath": "/home/faragon/.nuget/packages/",
+        "outputPath": "/home/faragon/Desktop/Repos/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Application/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/sarah/.nuget/NuGet/NuGet.Config"
+          "/home/faragon/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -133,8 +139,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/home/sarah/Descargas/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Domain/Inmobiliaria-Backend-HU4.Domain.csproj": {
-                "projectPath": "/home/sarah/Descargas/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Domain/Inmobiliaria-Backend-HU4.Domain.csproj"
+              "/home/faragon/Desktop/Repos/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Domain/Inmobiliaria-Backend-HU4.Domain.csproj": {
+                "projectPath": "/home/faragon/Desktop/Repos/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Domain/Inmobiliaria-Backend-HU4.Domain.csproj"
               }
             }
           }
@@ -143,7 +149,13 @@
           "warnAsError": [
             "NU1605"
           ]
-        }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0": {
@@ -182,21 +194,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.121/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/home/faragon/.dotnet/sdk/9.0.306/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "/home/sarah/Descargas/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Domain/Inmobiliaria-Backend-HU4.Domain.csproj": {
+    "/home/faragon/Desktop/Repos/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Domain/Inmobiliaria-Backend-HU4.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/sarah/Descargas/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Domain/Inmobiliaria-Backend-HU4.Domain.csproj",
+        "projectUniqueName": "/home/faragon/Desktop/Repos/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Domain/Inmobiliaria-Backend-HU4.Domain.csproj",
         "projectName": "Inmobiliaria-Backend-HU4.Domain",
-        "projectPath": "/home/sarah/Descargas/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Domain/Inmobiliaria-Backend-HU4.Domain.csproj",
-        "packagesPath": "/home/sarah/.nuget/packages/",
-        "outputPath": "/home/sarah/Descargas/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Domain/obj/",
+        "projectPath": "/home/faragon/Desktop/Repos/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Domain/Inmobiliaria-Backend-HU4.Domain.csproj",
+        "packagesPath": "/home/faragon/.nuget/packages/",
+        "outputPath": "/home/faragon/Desktop/Repos/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Domain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/sarah/.nuget/NuGet/NuGet.Config"
+          "/home/faragon/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -214,7 +226,13 @@
           "warnAsError": [
             "NU1605"
           ]
-        }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0": {
@@ -235,21 +253,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.121/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/home/faragon/.dotnet/sdk/9.0.306/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "/home/sarah/Descargas/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Infrastructure/Inmobiliaria-Backend-HU4.Infrastructure.csproj": {
+    "/home/faragon/Desktop/Repos/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Infrastructure/Inmobiliaria-Backend-HU4.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/sarah/Descargas/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Infrastructure/Inmobiliaria-Backend-HU4.Infrastructure.csproj",
+        "projectUniqueName": "/home/faragon/Desktop/Repos/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Infrastructure/Inmobiliaria-Backend-HU4.Infrastructure.csproj",
         "projectName": "Inmobiliaria-Backend-HU4.Infrastructure",
-        "projectPath": "/home/sarah/Descargas/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Infrastructure/Inmobiliaria-Backend-HU4.Infrastructure.csproj",
-        "packagesPath": "/home/sarah/.nuget/packages/",
-        "outputPath": "/home/sarah/Descargas/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Infrastructure/obj/",
+        "projectPath": "/home/faragon/Desktop/Repos/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Infrastructure/Inmobiliaria-Backend-HU4.Infrastructure.csproj",
+        "packagesPath": "/home/faragon/.nuget/packages/",
+        "outputPath": "/home/faragon/Desktop/Repos/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Infrastructure/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/sarah/.nuget/NuGet/NuGet.Config"
+          "/home/faragon/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -261,8 +279,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/home/sarah/Descargas/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Domain/Inmobiliaria-Backend-HU4.Domain.csproj": {
-                "projectPath": "/home/sarah/Descargas/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Domain/Inmobiliaria-Backend-HU4.Domain.csproj"
+              "/home/faragon/Desktop/Repos/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Application/Inmobiliaria-Backend-HU4.Application.csproj": {
+                "projectPath": "/home/faragon/Desktop/Repos/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Application/Inmobiliaria-Backend-HU4.Application.csproj"
+              },
+              "/home/faragon/Desktop/Repos/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Domain/Inmobiliaria-Backend-HU4.Domain.csproj": {
+                "projectPath": "/home/faragon/Desktop/Repos/Inmobiliaria-Backend-HU4/Inmobiliaria-Backend-HU4.Domain/Inmobiliaria-Backend-HU4.Domain.csproj"
               }
             }
           }
@@ -271,12 +292,22 @@
           "warnAsError": [
             "NU1605"
           ]
-        }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "CloudinaryDotNet": {
+              "target": "Package",
+              "version": "[1.27.8, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.10, )"
@@ -316,7 +347,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.121/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/home/faragon/.dotnet/sdk/9.0.306/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

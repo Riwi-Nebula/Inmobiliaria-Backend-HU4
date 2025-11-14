@@ -1,0 +1,7 @@
+﻿services:
+  inmobiliaria-backend-hu4.api:
+    image: inmobiliaria-backend-hu4.api
+    build:
+      context: .
+      dockerfile: Inmobiliaria-Backend-HU4.Api/Dockerfile
+
