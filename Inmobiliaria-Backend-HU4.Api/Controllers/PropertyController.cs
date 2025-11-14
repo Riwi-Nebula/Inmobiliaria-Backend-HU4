@@ -63,7 +63,7 @@ public class PropertyController : ControllerBase
 
             if (images != null && images.Any())
             {
-                var firstImage = images.First();  // 👈 Tomamos solo la primera imagen
+                var firstImage = images.First();
 
                 dto = new UploadFileDto
                 {

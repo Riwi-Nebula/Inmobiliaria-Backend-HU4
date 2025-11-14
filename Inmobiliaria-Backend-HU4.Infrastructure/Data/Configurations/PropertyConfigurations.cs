@@ -33,7 +33,7 @@ public class PropertyConfigurations : IEntityTypeConfiguration<Property>
         //     .IsRequired();
 
         builder.Property(p => p.PictureUrl)
-            .HasColumnType("text[]");
+            .HasColumnType("json");
         
         builder.Property(p => p.OwnerId)
             .IsRequired();
