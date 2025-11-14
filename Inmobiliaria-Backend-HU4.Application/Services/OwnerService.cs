@@ -68,31 +68,39 @@ public class OwnerService : IOwnerService
         }
     }
 
-    public async Task UpdateAsync(int id, OwnerDto ownerDto)
+    
+    public async Task<OwnerDto> UpdateAsync(int id, OwnerDto ownerDto)
     {
         try
         {
             var owner = await _repository.GetOwnerById(id);
+
             if (owner != null)
             {
                 owner.Name = ownerDto.Name;
                 owner.Email = ownerDto.Email;
 
-                await _repository.UpdateOwner(owner);
+                var updatedOwner = await _repository.UpdateOwner(owner);
+
+                if (updatedOwner != null)
+                    return MapOwnerToDto(updatedOwner);
             }
             else
             {
-                Console.WriteLine($"El propietario que se intenta actualizar es nulo");
+                Console.WriteLine($"El propietario con ID {id} no existe.");
+                throw new KeyNotFoundException($"El propietario con ID {id} no existe.");
             }
         }
         catch (Exception e)
         {
             Console.WriteLine("========================================================");
-            Console.WriteLine($"Ocurio un error actualizando un propietario:\n{e}");
-            Console.WriteLine("posible error en infrastructure o application");
+            Console.WriteLine($"Ocurrió un error actualizando un propietario:\n{e}");
+            Console.WriteLine("Posible error en Infrastructure o Application");
             Console.WriteLine("========================================================");
             throw;
         }
+
+        return null;
     }
 
     public async Task<IEnumerable<OwnerDto>> GetAllAsync()
