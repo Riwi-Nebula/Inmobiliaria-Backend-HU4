@@ -103,19 +103,6 @@ public class PropertyService : IPropertyService
         {
             throw new KeyNotFoundException($"Propiedad con el ID:{id} no encontrada para actualizar");
         }
-        var properties = await _repository.GetAllProperties();
-        bool exists = properties.Any(p =>
-            p.Tittle == propertyDto.Tittle &&
-            p.Location == propertyDto.Location &&
-            p.Description == propertyDto.Description &&
-            p.Address == propertyDto.Address
-        );
-
-        if (exists)
-        {
-            Console.WriteLine("========================================================");
-            throw new InvalidOperationException($"Ya existe una propiedad con esos datos");
-        }
 
         if (!Enum.TryParse<PropertyType>(propertyDto.Type, true, out var propertyType))
         {
@@ -137,7 +124,7 @@ public class PropertyService : IPropertyService
         property.Price = propertyDto.Price;
         property.OwnerId = propertyDto.OwnerId;
 
-        await _repository.UpdateProperty(property);
+
     }
 
     public async Task<IEnumerable<PropertyDto>> GetAllAsync()
