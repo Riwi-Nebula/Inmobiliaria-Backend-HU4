@@ -5,6 +5,7 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <RootNamespace>Inmobiliaria_Backend_HU4.Api</RootNamespace>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
   </PropertyGroup>
 
   <ItemGroup>
@@ -26,6 +27,12 @@
   <ItemGroup>
     <ProjectReference Include="..\Inmobiliaria-Backend-HU4.Application\Inmobiliaria-Backend-HU4.Application.csproj" />
     <ProjectReference Include="..\Inmobiliaria-Backend-HU4.Infrastructure\Inmobiliaria-Backend-HU4.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="..\.dockerignore">
+      <Link>.dockerignore</Link>
+    </Content>
   </ItemGroup>
 
 </Project>
